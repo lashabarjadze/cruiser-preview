@@ -658,23 +658,10 @@ body #search_mcruise_all .select2-container,
 body #search_mcruise_all h1, body #search_mcruise_all h2, body #search_mcruise_all h3, body #search_mcruise_all h4,
 body #search_mcruise_all p, body #search_mcruise_all span, body #search_mcruise_all a, body #search_mcruise_all div, body #search_mcruise_all label { font-family: var(--font) !important; }
 body #search_mcruise_all .search_block { background: var(--paper) !important; border: 0 !important; border-radius: 16px !important; box-shadow: var(--shadow-lg) !important; padding: 14px !important; }
-body #search_mcruise_all #searchbut,
-body #search_mcruise_all .btn-search,
-body #search_mcruise_all .book_price,
-body #search_mcruise_all .checked_price { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--ink) !important; border-radius: var(--radius-sm) !important; font-weight: 700 !important; box-shadow: none !important; }
-body #search_mcruise_all #clearsearch,
-body #search_mcruise_all .btn-clear { background: transparent !important; color: var(--muted) !important; border: 1px solid var(--line) !important; border-radius: var(--radius-sm) !important; }
-body #search_mcruise_all input,
-body #search_mcruise_all select,
-body #search_mcruise_all .select2-choice,
-body #search_mcruise_all .calendar-input { border-radius: var(--radius-sm) !important; border-color: var(--line) !important; background: var(--paper) !important; color: var(--ink) !important; }
-body #search_mcruise_all ._card_liner { background: var(--paper) !important; border: 1px solid var(--line) !important; border-radius: var(--radius) !important; box-shadow: none !important; overflow: hidden; }
-body #search_mcruise_all ._prices,
-body #search_mcruise_all .price-info,
-body #search_mcruise_all .description-price { color: var(--navy) !important; font-variant-numeric: tabular-nums; }
-body #search_mcruise_all ul.tabs li.active,
-body #search_mcruise_all .nav-tabs > li.active > a { background: var(--navy) !important; color: #fff !important; }
-body #search_mcruise_all a { color: var(--navy); }
+body #search_mcruise_all .block-selection-filter-left { border-color: var(--line) !important; }
+body #search_mcruise_all .description-price b,
+body #search_mcruise_all ._prices { font-variant-numeric: tabular-nums; }
+body #search_mcruise_all .description-photo img { border-radius: var(--radius-sm); }
 .search-page { background: linear-gradient(180deg, var(--navy-050), var(--paper) 340px); padding-bottom: 24px; }
 .search-page h1 { margin: 16px 0 10px; }
 .search-page .intro { margin-bottom: 22px; }
