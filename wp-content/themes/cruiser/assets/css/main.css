@@ -140,7 +140,7 @@ body.cruiser {
 .topbar span { display: inline-flex; align-items: center; gap: 6px; }
 .topbar .icon { width: 15px; height: 15px; color: var(--gold); }
 .topbar-meta { display: inline-flex; gap: 20px; }
-@media (max-width: 760px) { .topbar-meta { display: none; } .topbar-in { justify-content: center; text-align: center; } }
+@media (max-width: 760px) { .topbar .topbar-meta { display: none; } .topbar-in { justify-content: center; text-align: center; font-size: .78rem; } }
 
 /* No backdrop-filter here: it would turn the header into the containing block of the fixed mobile menu. */
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--line); }
@@ -277,6 +277,8 @@ body.cruiser {
 .ph--square { aspect-ratio: 1; }
 .ph > span { position: relative; z-index: 1; padding: 0 16px; font-weight: 700; text-align: center; }
 .ph img { width: 100%; height: 100% !important; object-fit: cover; transition: transform .4s; }
+/* If a linked photo ever fails to load, show the navy panel, not the alt text in a corner. */
+.cruiser img { color: transparent; }
 .card:hover .ph img { transform: scale(1.03); }
 .ph-wave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 34%; color: rgba(255, 255, 255, .1); }
 
@@ -365,6 +367,10 @@ body.cruiser {
 .facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
 .facts th { color: var(--muted); font-weight: 500; padding-right: 12px; width: 48%; }
 .facts td { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+/* Long answers (dress code, service charge) get the full width under their label. */
+.facts tr.is-long { display: grid; }
+.facts tr.is-long th { width: auto; padding-bottom: 0; border-bottom: 0; }
+.facts tr.is-long td { font-weight: 500; }
 
 /* ---------- Table of contents ---------- */
 
@@ -445,6 +451,11 @@ body.cruiser {
 .gallery figure { display: grid; gap: 6px; }
 .gallery .ph { border-radius: var(--radius-sm); }
 .gallery figcaption { font-size: .78rem; color: var(--muted); line-height: 1.4; }
+@media (max-width: 760px) {
+	/* A swipeable strip instead of full-width photos stacked one under another. */
+	.gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding-bottom: 6px; }
+	.gallery figure { flex: 0 0 78%; scroll-snap-align: start; }
+}
 .credit { color: inherit; }
 .credit a { color: inherit; text-decoration: underline; }
 .credit-line { font-size: .75rem; color: var(--muted); margin-top: 6px; }
